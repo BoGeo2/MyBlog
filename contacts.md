@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 title: Contacts
 permalink: /Contacts/
 ---
@@ -9,5 +9,5 @@ Ullamco elit consectetur ut incididunt id deserunt non eu mollit occaecat consec
 
 Lorem magna veniam elit aliqua id officia eu ut nisi. Ad do velit ut nisi. Eu tempor dolor aute elit nisi ullamco fugiat sunt id.
 
-Voluptate Lorem cillum qui velit id consectetur magna esse. Non pariatur nulla culpa ad minim eiusmod ad est reprehenderit ex commodo et ea voluptate. Enim adipisicing ut fugiat enim in labore. Enim aliqua do minim elit laborum est non sint amet esse laboris nisi laboris eu. Laboris et anim irure ex consectetur et eiusmod velit.
+
 
