@@ -21,7 +21,12 @@
   "homepage": "https://github.com/BoGeo2/MyBlog#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
+    "child_process": "^1.0.2",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0"
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-exec": "^4.0.0"
+  },
+  "dependencies": {
+    "cross-spawn": "^6.0.5"
   }
 }

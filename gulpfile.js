@@ -2,7 +2,10 @@
 
 let gulp = require("gulp"),
     autoprefixer = require("gulp-autoprefixer"),
-    browserSync = require("browser-sync").create();
+    exec = require("gulp-exec"),
+    browserSync = require("browser-sync").create(),
+    spawn = require('cross-spawn');
+    
 
 
 gulp.task("css", function(){
@@ -11,6 +14,10 @@ gulp.task("css", function(){
     .pipe( gulp.dest( './docs/css/') )
     .pipe( browserSync.stream({ match: '**/*.css'}));
 });
+
+gulp.task('jekyll', function() {
+     return spawn("bundle", ["exec", "jekyll", "build"], { stdio: "inherit" });
+  });
 
 gulp.task("watch", function(){
 
@@ -21,9 +28,19 @@ gulp.task("watch", function(){
     });
 
     gulp.watch( '_assets/css/**/*.css', gulp.series( 'css'));
+    
+    gulp.watch(
+        [
+            "./*.html",
+          "./_includes/*.html",
+          "./_layouts/*.html",
+          "./_posts/**/*.*"
+        ]
+    ).on('change', gulp.series('jekyll', 'css'));
+
     gulp.watch( 'docs/**/*.html').on('change', browserSync.reload);
     gulp.watch( 'docs/**/*.js').on('change', browserSync.reload);
-
 });
 
-gulp.task("default", gulp.series("watch"));
+
+gulp.task("default", gulp.series("css", "watch"));
