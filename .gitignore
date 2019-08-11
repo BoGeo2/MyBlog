@@ -2,3 +2,11 @@ _site
 .sass-cache
 .jekyll-metadata
 /node_modules
+_assets
+_layouts
+_posts
+Gemfile
+Gemfile.lock 
+gulpfile.js 
+package.json
+package-lock.json
